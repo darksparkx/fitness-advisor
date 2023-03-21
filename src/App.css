@@ -1,38 +1,148 @@
-.App {
-  text-align: center;
+body {
+    font-family: "Josefin Sans";
+    background-color: #fffafb;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+::-webkit-scrollbar {
+    width: 0px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.right-arrow,
+.left-arrow {
+    z-index: 1;
+    cursor: pointer;
+    width: 50px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #a2634c;
+    font-size: 25px;
+    border-radius: 4px;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transition: 0.3s all ease-in-out;
 }
 
-.App-link {
-  color: #61dafb;
+.right-arrow {
+    left: 0;
+    right: 100%;
+}
+.left-arrow {
+    left: 100%;
+    right: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+.react-horizontal-scrolling-menu--wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.detail-image {
+    width: 729px;
+    height: 742px;
+}
+
+.hero-banner-img {
+    position: absolute;
+    right: 40px;
+    top: 0px;
+    width: 700px;
+    height: 900px;
+    margin-top: -330px;
+}
+
+.exercise-card {
+    width: 400px;
+    height: 445px;
+    background: #fff;
+    border-top: 4px solid #a2634c;
+    border-bottom-left-radius: 20px;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-bottom: 10px;
+    transform: scale(1, 1);
+    transition: 0.3s all ease-in-out;
+}
+
+.exercise-card img {
+    height: 326px;
+}
+
+.bodyPart-card {
+    transform: scale(1, 1);
+    transition: 0.3s all ease-in-out;
+}
+
+.exercise-card:hover,
+.bodyPart-card:hover {
+    transform: scale(1.1, 1.1);
+}
+
+.search-btn:hover {
+    color: #a2634c !important;
+    border: 1px solid #a2634c !important;
+}
+
+.exercise-video {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 387px;
+    height: 381px;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 1230px) {
+    .detail-image {
+        width: 300px;
+        height: 300px;
+    }
+
+    .react-horizontal-scrolling-menu--scroll-container {
+        width: 500px;
+    }
+
+    .hero-banner-img {
+        display: none;
+    }
+
+    .exercise-card {
+        width: 320px;
+    }
+
+    .exercise-video {
+        width: 320px;
+        height: 300px;
+    }
+    .right-arrow {
+        left: 0;
+        right: 90%;
+    }
+    .left-arrow {
+        left: 87%;
+        right: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .exercise-card {
+        width: 280px;
+    }
 }
